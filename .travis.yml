@@ -1,9 +1,8 @@
 language: node_js
 
 node_js:
-  - 16
-  - 10
+  - 18
 
 notifications:
   email:
-    - "jhurliman@jhurliman.org"
+    - "stolpa413@gmail.com"

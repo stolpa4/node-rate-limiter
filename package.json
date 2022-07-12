@@ -1,44 +1,74 @@
 {
-  "name": "limiter",
-  "description": "A generic rate limiter for the web and node.js. Useful for API clients, web crawling, or other tasks that need to be throttled",
-  "version": "2.1.1",
-  "author": "John Hurliman <jhurliman@jhurliman.org>",
-  "main": "./build/index.js",
-  "type": "module",
-  "exports": {
-    "import": "./build/index.js"
-  },
-  "repository": "git://github.com/stolpa4/node-rate-limiter",
-  "bugs": {
-    "url": "http://github.com/stolpa4/node-rate-limiter/issues"
-  },
-  "license": "MIT",
-  "files": [
-    "build",
-    "src"
-  ],
-  "scripts": {
-    "clean": "rm -rf build tsconfig.tsbuildinfo",
-    "lint": "eslint --fix src",
-    "build": "tsc --build ./tsconfig.json",
-    "test": "jest src"
-  },
-  "dependencies": {
-    "just-performance": "4.3.0"
-  },
-  "devDependencies": {
-    "@types/jest": "^28.1.4",
-    "@typescript-eslint/eslint-plugin": "^5.30.6",
-    "@typescript-eslint/parser": "^5.30.6",
-    "eslint": "^8.19.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "jest": "^28.1.2",
-    "prettier": "^2.7.1",
-    "typescript": "^4.7.4"
-  },
-  "keywords": [
-    "rate",
-    "limiting",
-    "throttling"
-  ]
+    "author": "John Hurliman <jhurliman@jhurliman.org>",
+    "bugs": {
+        "url": "http://github.com/stolpa4/node-rate-limiter/issues"
+    },
+    "dependencies": {
+        "just-performance": "4.3.0"
+    },
+    "description": "A generic rate limiter for the web and node.js. Useful for API clients, web crawling, or other tasks that need to be throttled",
+    "devDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "^3.2.0",
+        "@types/jest": "^28.1.4",
+        "jest": "^28.1.2",
+        "prettier": "^2.7.1",
+        "ts-jest": "^28.0.5",
+        "typescript": "^4.7.4"
+    },
+    "exports": {
+        "import": "./build/index.js"
+    },
+    "files": [
+        "build",
+        "src"
+    ],
+    "jest": {
+        "globals": {
+            "ts-jest": {
+                "tsconfig": "tsconfig.jest.json"
+            }
+        },
+        "moduleDirectories": [
+            "./node_modules",
+            "./src"
+        ],
+        "preset": "ts-jest",
+        "testEnvironment": "node",
+        "transform": {
+            "^.+\\.tsx?$": "ts-jest"
+        },
+        "verbose": true
+    },
+    "keywords": [
+        "rate",
+        "limiting",
+        "throttling"
+    ],
+    "license": "MIT",
+    "main": "./build/index.js",
+    "name": "limiter",
+    "prettier": {
+        "importOrder": [
+            "^@core/(.*)$",
+            "^@server/(.*)$",
+            "^@ui/(.*)$",
+            "^[./]"
+        ],
+        "importOrderSeparation": true,
+        "importOrderSortSpecifiers": true,
+        "printWidth": 120,
+        "semi": true,
+        "singleQuote": true,
+        "tabWidth": 4,
+        "trailingComma": "es5"
+    },
+    "repository": "git://github.com/stolpa4/node-rate-limiter",
+    "scripts": {
+        "build": "tsc --build ./tsconfig.json",
+        "clean": "rm -rf build tsconfig.tsbuildinfo",
+        "pretty": "prettier --write --ignore-unknown src scripts tests && node scripts/sortJson.cjs ./ 4",
+        "test": "jest --coverage"
+    },
+    "type": "module",
+    "version": "2.1.1"
 }

@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
         "allowUnreachableCode": false,
         "allowUnusedLabels": false,
         "alwaysStrict": true,
@@ -7,11 +9,9 @@
         "esModuleInterop": true,
         "exactOptionalPropertyTypes": true,
         "forceConsistentCasingInFileNames": true,
-        "lib": [
-            "es2021"
-        ],
-        "module": "es2022",
-        "moduleResolution": "nodenext",
+        "isolatedModules": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
         "noEmitOnError": true,
         "noFallthroughCasesInSwitch": true,
         "noImplicitAny": true,
@@ -22,10 +22,9 @@
         "noUncheckedIndexedAccess": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
-        "outDir": "./build",
+        "outDir": "./build.tests",
         "removeComments": true,
         "resolveJsonModule": true,
-        "rootDir": "./src",
         "skipLibCheck": true,
         "sourceMap": true,
         "strict": true,
@@ -34,9 +33,12 @@
         "strictNullChecks": true,
         "strictPropertyInitialization": true,
         "target": "es2022",
+        "types": [
+            "jest"
+        ],
         "useUnknownInCatchVariables": true
     },
     "include": [
-        "./src/**/*.ts"
+        "./tests/**/*"
     ]
 }
