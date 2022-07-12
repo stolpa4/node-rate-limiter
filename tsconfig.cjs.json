@@ -1,9 +1,0 @@
-// -*- jsonc -*-
-// https://www.typescriptlang.org/tsconfig
-{
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "outDir": "./dist/cjs",
-    "module": "commonjs"
-  }
-}

@@ -8,4 +8,4 @@ TODO
   - [ ] Add prettier and format the code
   - [ ] Move to es2022 mudule (target 2019 is OK)
   - [ ] Remove cjs support
-  - [ ] ... tests, project structure, etc
+  - [ ] ... tests, project structure, git flow etc

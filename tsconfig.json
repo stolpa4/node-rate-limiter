@@ -3,21 +3,14 @@
 {
   "include": ["./src/**/*.ts"],
   "compilerOptions": {
-    "plugins": [
-      {
-        "transform": "@zoltu/typescript-transformer-append-js-extension/output/index.js",
-        "after": true
-      }
-    ],
-    "outDir": "./dist/esm",
+    "outDir": "./build",
     "rootDir": "./src",
-    "target": "es2019",
-    "module": "es2020",
-    "lib": ["es2019"],
-    "moduleResolution": "node",
+    "target": "es2022",
+    "module": "es2022",
+    "lib": ["es2021"],
+    "moduleResolution": "nodenext",
     "isolatedModules": true,
     "composite": true,
-    "newLine": "lf",
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
