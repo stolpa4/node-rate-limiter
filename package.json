@@ -25,6 +25,7 @@
     "jest": {
         "globals": {
             "ts-jest": {
+                "isolatedModules": true,
                 "tsconfig": "tsconfig.jest.json"
             }
         },
@@ -32,6 +33,9 @@
             "./node_modules",
             "./src"
         ],
+        "moduleNameMapper": {
+            "^(\\.{1,2}/.*)\\.js$": "$1"
+        },
         "preset": "ts-jest",
         "testEnvironment": "node",
         "transform": {
@@ -65,7 +69,7 @@
     "repository": "git://github.com/stolpa4/node-rate-limiter",
     "scripts": {
         "build": "tsc --build ./tsconfig.json",
-        "clean": "rm -rf build tsconfig.tsbuildinfo",
+        "clean": "rm -rf build tsconfig.tsbuildinfo coverage build.tests",
         "pretty": "prettier --write --ignore-unknown src scripts tests && node scripts/sortJson.cjs ./ 4",
         "test": "jest --coverage"
     },

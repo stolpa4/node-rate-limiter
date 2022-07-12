@@ -10,8 +10,11 @@
         "exactOptionalPropertyTypes": true,
         "forceConsistentCasingInFileNames": true,
         "isolatedModules": true,
-        "module": "commonjs",
-        "moduleResolution": "node",
+        "lib": [
+            "es2021"
+        ],
+        "module": "es2022",
+        "moduleResolution": "nodenext",
         "noEmitOnError": true,
         "noFallthroughCasesInSwitch": true,
         "noImplicitAny": true,

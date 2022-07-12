@@ -59,6 +59,7 @@ export class TokenBucket {
             this.interval = interval;
         }
 
+        // @ts-ignore
         this.parentBucket = parentBucket;
         this.content = 0;
         this.lastDrip = getMilliseconds();
