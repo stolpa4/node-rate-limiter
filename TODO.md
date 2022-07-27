@@ -11,6 +11,7 @@ TODO
   - [x] Move to es2022 module
   - [x] Remove cjs support
   - [x] Factor out tests
+  - [ ] Migrate to git-flow
   - [ ] More tests (quasi-100% coverage)
   - [ ] ... tests, project structure, git flow etc
   - [ ] Remove just performance dependency
