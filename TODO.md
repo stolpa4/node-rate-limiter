@@ -15,3 +15,6 @@ TODO
   - [ ] More tests (quasi-100% coverage)
   - [ ] ... tests, project structure, git flow etc
   - [ ] Remove just performance dependency
+
+- [ ] **Proper ES6 module**
+  - [ ] [Find out](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c), how to make a proper ES6 module library ([here too](https://www.typescriptlang.org/docs/handbook/esm-node.html))
