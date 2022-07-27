@@ -1,7 +1,7 @@
 import { RateLimiter } from '../src/RateLimiter.js';
 import { Interval } from '../src/TokenBucket.js';
 
-describe('RateLimiter', () => {
+describe('RateLimiter instantiation', () => {
     describe('interval validation', () => {
         it('invalid interval', () => {
             const junkInterval = 'junk' as unknown as Interval;
